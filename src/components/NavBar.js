@@ -1,9 +1,12 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
-function NavBar() {
-     // 1bc1b530a88739d11b24475d16e9b00d
+function NavBar({search}) {
 
+     const onSearch = (word) => {
+          search(word)
+     }
+//step 7 - import the prop (search) from App.js and inject it in our HTML elements to be able to search for the movies
   return (
     <div className='nav-style w-100'>
           <Container>
@@ -14,7 +17,7 @@ function NavBar() {
                     <Col sx="10" lg="11" className='d-flex align-items-center'>
                          <div className='search w-100'>
                               <i className='fa fa-search'></i>
-                              <input type="text" className='form-control' placeholder='Search' />
+                              <input onChange={(e) => onSearch(e.target.value)} type="text" className='form-control' placeholder='Search' />
                          </div>
                     </Col>
                </Row>
