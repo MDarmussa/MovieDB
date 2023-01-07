@@ -3,6 +3,9 @@ import NavBar from "./components/NavBar";
 import MoviesList from "./components/MoviesList";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import MovieDetails from "./components/MovieDetails";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 
 function App() {
 
@@ -46,11 +49,17 @@ function App() {
     }
   }
 
+
   return (
     <div className="font color-body">
       <NavBar search={search} />
       <Container>
-          <MoviesList movies={movies} getPage={getPage} pageCount={pageCount} />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<MoviesList movies={movies} getPage={getPage} pageCount={pageCount} />} />
+            <Route path="/movie/:id" element={<MovieDetails />} />
+          </Routes>
+        </BrowserRouter>
       </Container>
     </div>
   );
