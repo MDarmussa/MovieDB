@@ -1,5 +1,8 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import logo from '../images/logo.png'
+import { Link } from 'react-router-dom'
+
 
 function NavBar({search}) {
 
@@ -12,7 +15,9 @@ function NavBar({search}) {
           <Container>
                <Row className='pt-2'>
                     <Col xs="2" lg="1">
-                         <img className='logo' src='logo.png' alt='anything' />
+                         <a href='/'>
+                              <img className='logo' src={logo} alt='anything' />
+                         </a>
                     </Col>
                     <Col sx="10" lg="11" className='d-flex align-items-center'>
                          <div className='search w-100'>

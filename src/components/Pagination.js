@@ -6,7 +6,7 @@ import ReactPaginate from 'react-paginate'
 //10- import the prop (getpage) from MOvieList.js and inject it in the handlePageClick function
 function PaginationComponent({ getPage, pageCount }) {
      const handlePageClick =(data) => {
-          // console.log(data.selected + 1)
+          console.log(data.selected + 1)
           getPage(data.selected + 1)
      }
    //   const pageCount = 500;
