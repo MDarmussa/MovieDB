@@ -13,7 +13,7 @@ Some of the features and functionalities were added to this project:
 Resources and links:
 - https://www.themoviedb.org/
 - https://www.npmjs.com/package/react-paginate 
-- - https://react-bootstrap.github.io/components/pagination/
+- https://react-bootstrap.github.io/components/pagination/
 - https://react-bootstrap.github.io/
 - https://fonts.google.com/about
 - https://www.npmjs.com/package/react-router-dom
